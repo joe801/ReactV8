@@ -22,4 +22,14 @@
 * create a vite.config.js file o configure vite
 ***  INSTALL REACT
 >> npm install react@18.2.0 react-dom@18.2.0
-* build, dev, and build script tags should be created
+* build, dev, and preview script tags should be created
+** Enabling ESLINT to recognise react (jsx)
+>> npm install -D eslint-plugin-import@2.26.0 eslint-plugin-jsx-a11y@6.6.1 eslint-plugin-react@7.31.8
+* more configuration is done in eslintrc.json afterwards
+
+## setstate Hook
+- hooks can be defined or set in a loop or conditional statement
+- Eg useState, useEffect, use...
+** Enabling eslint for react hooks
+>>  npm install -D eslint-plugin-react-hooks@4.6.0
+* configuration is done in eslintrc
