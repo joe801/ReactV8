@@ -1,0 +1,20 @@
+## Pure React
+
+>> npm init -y // to initialize project and answer yes to all files
+
+## installing prettier:
+>>  npm i -D prettier@2.7.1
+* create a .prettierrc file (used for prettier configuration)
+* turn on format on save in vs settings after installing
+* turn on prettier require config
+* a script can be created in package.json to run prettier
+
+## installing eslint
+>> npm install -D eslint@8.24.0 eslint-config-prettier@8.5.0
+* create a .eslintrc.json file to configurate eslint
+* install eslint extension on vs code
+* write a script for eslint
+* >> npm run lint -- fix // to try to fix things automatically with eslint
+
+## installing vite
+>> npm install -D vite@3.1.4 @vitejs/plugin-react@2.1.0
