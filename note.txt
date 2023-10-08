@@ -18,3 +18,8 @@
 
 ## installing vite
 >> npm install -D vite@3.1.4 @vitejs/plugin-react@2.1.0
+* add type module in script for vite to recognise
+* create a vite.config.js file o configure vite
+***  INSTALL REACT
+>> npm install react@18.2.0 react-dom@18.2.0
+* build, dev, and build script tags should be created
