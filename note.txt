@@ -33,3 +33,11 @@
 ** Enabling eslint for react hooks
 >>  npm install -D eslint-plugin-react-hooks@4.6.0
 * configuration is done in eslintrc
+
+## react router
+>> npm install react-router-dom@6.4.1
+
+## react query
+** Install react query
+>> npm install @tanstack/react-query@4.10.1
+>> import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
