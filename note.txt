@@ -41,3 +41,12 @@
 ** Install react query
 >> npm install @tanstack/react-query@4.10.1
 >> import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+## Error Boundary
+error boundary can only be done in class component
+
+## Portals
+use for creating modals
+
+## useContext
+works like redux, for providing a global state for entire application
