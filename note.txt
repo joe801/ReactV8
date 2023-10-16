@@ -50,3 +50,12 @@ use for creating modals
 
 ## useContext
 works like redux, for providing a global state for entire application
+
+## useRef
+- ref is used to store data that shoudn't re render page when changed
+- don't read or write ref during rendering
+- ref shuold be use in useeffect and events like onClick
+
+## useReducer
+works like redux
+

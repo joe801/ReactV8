@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useState } from "react";
 import AdoptedPetContext from "./AdoptedPetContext";
+import Test from "./Test";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -26,9 +27,11 @@ const App = () => {
             <header>
               <Link to="/">Adopt Me!</Link>
             </header>
+            <Link to="/test">test</Link>
             <Routes>
               <Route path="/details/:id" element={<Details />} />
               <Route path="/" element={<SearchParams />} />
+              <Route path="/test" element={<Test />}/>
             </Routes>
           </QueryClientProvider>
         </AdoptedPetContext.Provider>
