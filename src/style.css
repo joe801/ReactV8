@@ -251,6 +251,17 @@
     margin-right: 15px;
   }
 
+  #myButtons{
+    display: flex;
+    margin-bottom: 1rem;
+    float: right;
+    width: 715px;
+  }
+
+ .buttActive{
+    opacity: 0.7;
+  }
+
   @media only screen and (max-width: 1129px) {
     header {
       display: flex;
@@ -275,6 +286,10 @@
       border-radius: 9px;
       float: left;
       margin-bottom: 25px;
+    }
+
+    #myButtons{
+      width: 55%;
     }
   
     .details {
@@ -310,6 +325,9 @@
     }
   
     .search {
+      width: 100%;
+    }
+    #myButtons{
       width: 100%;
     }
   }

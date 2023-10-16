@@ -17,10 +17,25 @@ const SearchParams = () => {
     breed: "",
   });
 
+  // adding pagination
+  const [page, setPage] = useState(0);
+
   const [adoptedPet] = useContext(AdoptedPetContext);
 
-  const results = useQuery(["search", requestParams], fetchSearch);
+  const results = useQuery(["search", requestParams, page], fetchSearch);
   const pets = results?.data?.pets ?? []; // assign empty array if no result.data.pet
+  const hasNext = results?.data?.hasNext;
+  const nextPage = () => {
+    if (hasNext) {
+      setPage((prev) => prev + 1);
+    }
+  }
+
+  const prevPage = () => {
+    if (results.data.startIndex > 0) {
+      setPage((prev) => prev - 1); 
+    }
+  }
 
   // useEffect(() => {
   //   requestPets();
@@ -90,7 +105,10 @@ const SearchParams = () => {
         <button>Submit</button>
       </form>
       <Results pets={pets} />
-      
+      <div id="myButtons">
+        <button onClick={prevPage} className={!results?.data?.startIndex > 0 ? "buttActive" : ""}>Prev</button>
+        <button onClick={nextPage} className={!hasNext ? "buttActive" : ""}>Next</button>
+      </div>
     </div>
   );
 };
