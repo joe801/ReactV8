@@ -32,7 +32,6 @@ const App = () => {
             <header className="w-full mb-10 text-center p-7 bg-gradient-to-b from-yellow-400 via-orange-500 to-red-500">
               <Link className="text-6xl text-white hover:text-gray-200" to="/">Adopt Me!</Link>
             </header>
-            <Link to="/test">test</Link>
             <Routes>
               <Route path="/details/:id" element={<Details />} />
               <Route path="/" element={<SearchParams />} />

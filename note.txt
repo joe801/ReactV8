@@ -58,4 +58,3 @@ works like redux, for providing a global state for entire application
 
 ## useReducer
 works like redux
-
