@@ -58,3 +58,6 @@ works like redux, for providing a global state for entire application
 
 ## useReducer
 works like redux
+
+## code splitting
+this is to loads application asynchronously i.e it only loads page when we try to access it
