@@ -29,13 +29,13 @@ const SearchParams = () => {
     if (hasNext) {
       setPage((prev) => prev + 1);
     }
-  }
+  };
 
   const prevPage = () => {
     if (results.data.startIndex > 0) {
-      setPage((prev) => prev - 1); 
+      setPage((prev) => prev - 1);
     }
-  }
+  };
 
   // useEffect(() => {
   //   requestPets();
@@ -51,8 +51,9 @@ const SearchParams = () => {
   // }
 
   return (
-    <div className="search-params">
+    <div className="my-0 mx-auto w-11/12">
       <form
+        className="p-10 mb-10 rounded-lg bg-gray-200 shadow-lg flex flex-col justify-center items-center"
         onSubmit={(e) => {
           e.preventDefault();
           const formData = new FormData(e.target); // pulling out data from form (in object)
@@ -71,13 +72,20 @@ const SearchParams = () => {
         ) : null}
         <label htmlFor="location">
           Location
-          <input id="location" name="location" placeholder="Location" />
+          <input
+            type="text"
+            id="location"
+            name="location"
+            placeholder="Location"
+            className="search-input"
+          />
         </label>
         <label htmlFor="animal">
           Animal
           <select
             id="animal"
             name="animal"
+            className="search-input"
             value={animal}
             onChange={(e) => {
               setAnimal(e.target.value);
@@ -93,7 +101,12 @@ const SearchParams = () => {
         </label>
         <label htmlFor="breed">
           Breed
-          <select id="breed" disabled={breeds.length === 0} name="breed">
+          <select
+            id="breed"
+            disabled={breeds.length === 0}
+            name="breed"
+            className="w-60 mb-5 block grayed-out-disabled"
+          >
             <option />
             {breeds.map((breed) => (
               <option key={breed} value={breed}>
@@ -102,12 +115,21 @@ const SearchParams = () => {
             ))}
           </select>
         </label>
-        <button>Submit</button>
+        <button className="rounded px-6 py-2 text-white hover:opacity-50 border-none bg-orange-500">
+          Submit
+        </button>
       </form>
       <Results pets={pets} />
       <div id="myButtons">
-        <button onClick={prevPage} className={!results?.data?.startIndex > 0 ? "buttActive" : ""}>Prev</button>
-        <button onClick={nextPage} className={!hasNext ? "buttActive" : ""}>Next</button>
+        <button
+          onClick={prevPage}
+          className={!results?.data?.startIndex > 0 ? "buttActive" : ""}
+        >
+          Prev
+        </button>
+        <button onClick={nextPage} className={!hasNext ? "buttActive" : ""}>
+          Next
+        </button>
       </div>
     </div>
   );
