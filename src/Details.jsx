@@ -28,7 +28,7 @@ const Details = () => {
   }
   // console.log(results, "results")
   const pet = results.data.pets[0];
-  console.log(results, "results");
+  console.log(results, "results")
 
   return (
     <div className="details">

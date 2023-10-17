@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useRef, useReducer } from "react";
 
 function reducer(state, action) {
   switch (action.type) {
@@ -12,17 +12,19 @@ function reducer(state, action) {
 }
 
 const Test = () => {
-  //   const name = useRef();
-  //   name.current.innerHTML = "Uwagbale Joseph";
+//   const name = useRef();
+//   name.current.innerHTML = "Uwagbale Joseph";
 
   const [age, dispatch] = useReducer(reducer, 20);
   return (
     <div>
       <h1>Test</h1>
       {/* <p ref={name}></p> */}
-      <p>i am {age} years old</p>
-      <button onClick={() => dispatch({ type: "add" })}>add age</button>
-      <button onClick={() => dispatch({ type: "minus" })}>minus age</button>
+      <p>
+        i am {age} years old
+      </p>
+      <button onClick={() => dispatch({type: 'add'})}>add age</button>
+      <button onClick={() => dispatch({type: 'minus'})}>minus age</button>
     </div>
   );
 };
