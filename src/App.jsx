@@ -1,5 +1,5 @@
-import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { createRoot } from "react-dom/client";
+import { Routes, Route } from "react-router-dom";
 // import SearchParams from "./SearchParams";
 // import Details from "./Details";
 import { Link } from "react-router-dom";
@@ -24,7 +24,6 @@ const App = () => {
   const adoptedPet = useState(null);
   return (
     <div>
-      <BrowserRouter>
         <AdoptedPetContext.Provider value={adoptedPet}>
           <QueryClientProvider client={queryClient}>
             <Suspense
@@ -45,11 +44,12 @@ const App = () => {
             </Suspense>
           </QueryClientProvider>
         </AdoptedPetContext.Provider>
-      </BrowserRouter>
     </div>
   );
 };
 
-const container = document.getElementById("root");
-const root = createRoot(container);
-root.render(<App />);
+// const container = document.getElementById("root");
+// const root = createRoot(container);
+// root.render(<App />);
+
+export default App;
