@@ -61,3 +61,9 @@ works like redux
 
 ## code splitting
 this is to loads application asynchronously i.e it only loads page when we try to access it
+
+## converting to typescript
+** installing typescript
+>> npm install -D typescript@4.8.4
+>> tsc --init // to initialize and cofigure typescript
+>> npm install -D @types/react@18.0.21 @types/react-dom@18.0.6 // installing project types
